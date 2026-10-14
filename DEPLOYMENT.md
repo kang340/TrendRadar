@@ -9,7 +9,10 @@
 
 `Get Hot News` 默认每小时第 33 分钟运行一次，GitHub 调度可能延迟。
 时区为 `Asia/Shanghai`。每次抓取完成后，工作流将本次生成的报告发布到 GitHub Pages。
-报告使用上游默认数据源与关键词，报告模式为当前榜单。
+热榜接口使用 OmniTrends 作者的公共服务 `https://trends.zzzkkkccc.site/api/s`，
+保留原有 11 个热榜平台并增加小红书，共 12 个平台。该服务由作者维护。
+报告使用上游默认关键词，报告模式为当前榜单；只显示匹配关键词的内容。
+如需恢复 NewsNow 默认接口，将 `platforms.api_url` 改为空字符串并移除小红书源。
 默认雅虎财经 RSS 地址在首次部署验证中返回 404，已暂时禁用；Hacker News RSS 正常启用。
 
 尚未配置消息推送和 AI 密钥，对应功能暂时关闭。
