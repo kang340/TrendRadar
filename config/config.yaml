@@ -140,6 +140,7 @@ rss:
     - id: "yahoo-finance"
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
+      enabled: false                  # 此订阅地址返回 404，替换为有效地址后可开启
 
     # 自定义源示例
     # - id: "custom-feed"
